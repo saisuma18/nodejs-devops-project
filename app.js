@@ -1,19 +1,24 @@
 const express = require("express");
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
 app.get("/", (req, res) => {
-    res.send("Hello from Kubernetes + Jenkins + Docker");
+  res.json({
+    message: "Hello from Node.js!",
+    version: "1.0",
+    environment: process.env.NODE_ENV || "development"
+  });
 });
 
 app.get("/health", (req, res) => {
-    res.json({
-        status: "Application Running"
-    });
+  res.status(200).json({
+    status: "UP"
+  });
 });
-
-const PORT = 3000;
 
 app.listen(PORT, () => {
-    console.log(`Server started on ${PORT}`);
+  console.log(`Application running on port ${PORT}`);
 });
+
+module.exports = app;

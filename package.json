@@ -5,13 +5,25 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "test": "echo \"No tests yet\""
+    "test": "jest"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "type": "commonjs",
   "dependencies": {
-    "express": "^5.1.0"
+    "express": "^5.2.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/saisuma18/nodejs-devops-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/saisuma18/nodejs-devops-project/issues"
+  },
+  "homepage": "https://github.com/saisuma18/nodejs-devops-project#readme",
+  "devDependencies": {
+    "jest": "^30.4.2",
+    "supertest": "^7.2.2"
   }
 }
